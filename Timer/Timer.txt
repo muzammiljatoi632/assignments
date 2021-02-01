@@ -1,0 +1,21 @@
+
+var now = new Date();
+
+var x = setInterval(function () {
+
+    var hours = parseInt(document.getElementById("hours").value);
+    var minutes = parseInt(document.getElementById("minutes").value);
+    var seconds = parseInt(document.getElementById("seconds").value);
+
+    var hDistance = hours - now.getHours();
+    var mDistance = minutes - now.getMinutes();
+    var sDistance = seconds - now.getSeconds();
+
+    Math.floor((hDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    Math.floor((mDistance % (1000 * 60 * 60)) / (1000 * 60));
+    Math.floor((sDistance % (1000 * 60)) / 1000);
+
+    document.getElementById("timer").innerHTML = hours + " : " +
+        minutes + " : " + seconds;
+
+}, 1000);
