@@ -14,7 +14,7 @@ function timer() {
     displaymilli.innerHTML = milli
     if (milli == 100) {
         sec++
-        displaysec.innerHTML = Sec
+        displaysec.innerHTML = sec
         milli = 0
     } else if (sec == 60) {
         min++
@@ -27,23 +27,22 @@ function timer() {
 
     }
 }
-timer();
 
-    function start() {
-        timerplay = setInterval(timer, 10)
-    }
+function start() {
+    timerplay = setInterval(timer, 10)
+}
 
-    function pause() {
-        clearInterval(timerplay)
-    }
+function pause() {
+    clearInterval(timerplay)
+}
 
-    function reset() {
-        milli = 0
-        sec = 0
-        min = 0
-        hour = 0
-        displayhour.innerHTML = hour
-        displaymin.innerHTML = min
-        displaysec.innerHTML = sec
-        displaymilli.innerHTML = milli
-    }
+function reset() {
+    milli = 0
+    sec = 0
+    min = 0
+    hour = 0
+    displayhour.innerHTML = hour
+    displaymin.innerHTML = min
+    displaysec.innerHTML = sec
+    displaymilli.innerHTML = milli
+}
